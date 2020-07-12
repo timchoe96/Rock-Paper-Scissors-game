@@ -1,0 +1,79 @@
+$scissorsGradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+$paperGradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+$rockGradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+$lizardGradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+$cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+
+
+$darkText: hsl(229, 25%, 31%);
+$scoreText: hsl(229, 64%, 46%);
+$headerOutline: hsl(217, 16%, 45%);
+
+
+
+$radialGradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+
+
+.scoreBoard{
+    position:relative;
+    z-index:5;
+    border:3px solid $headerOutline;
+    padding:20px 30px;
+    border-radius:15px;
+    display:flex;
+    margin: auto ;
+    width:60vw;
+    justify-content: space-between;
+    align-items: center;
+    .score{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        height:110px;
+        width:150px;
+        border-radius:5px;
+        background:white;
+        text-align: center;
+        div{
+        &:nth-child(1){
+            color:$scoreText;
+            margin-bottom:-10px;
+        }
+        &:nth-child(2){
+            font-weight: 800;
+            color:$darkText;
+            font-size:70px;
+        }
+    }
+    }
+}
+
+@media only screen and (max-width:750px){
+    .scoreBoard{
+        width:90vw;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .scoreBoard{
+        padding:10px 30px;
+        border-radius: 10px;;
+       img{
+           height:60px;
+           width:auto;
+       }
+       .score{
+           height:80px;
+           width:100px;
+           div{
+            &:nth-child(1){
+           font-size:10px;
+          
+            }
+            &:nth-child(2){
+               font-size:50px;
+            }
+        }
+       }
+    }
+}
